@@ -1,0 +1,43 @@
+@import "react-toastify/dist/ReactToastify.css";
+@import "tailwindcss";
+
+/* Nạp CSS từ CDN vì môi trường không hỗ trợ import trực tiếp .css từ node_modules 
+    @import url('https://cdn.jsdelivr.net/npm/react-toastify@10.0.5/dist/ReactToastify.css'); */
+
+    :root {
+      --toastify-color-success: #10b981;
+      --toastify-color-error: #ef4444;
+      --toastify-toast-width: 380px;
+      --toastify-toast-background: #ffffff;
+      --toastify-text-color-light: #1f2937;
+    }
+
+    /* Tùy chỉnh hộp thoại Toast */
+    .Toastify__toast {
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border: 1px solid #f3f4f6;
+    }
+
+    /* Thanh Progress Bar "Fancy" - Chạy ngược (đầy dần lên) */
+    .fancy-progress-bar {
+      height: 6px !important;
+      background: linear-gradient(90deg, #3b82f6, #10b981) !important;
+      /* Animation mặc định của toastify là giảm width từ 100% về 0% 
+         Chúng ta lật ngược nó lại bằng scaleX nếu muốn, 
+         nhưng thông thường người dùng thích nhìn thời gian đếm ngược hơn */
+    }
+
+    /* Hiệu ứng kéo thả mượt mà */
+    .Toastify__toast--draggable {
+      cursor: grab;
+    }
+    .Toastify__toast--swiped {
+      opacity: 0.5;
+    }
+
+    /* Icon đóng tùy chỉnh */
+    .Toastify__close-button {
+      align-self: center;
+    }
